@@ -1,5 +1,7 @@
 const weatherForm = document.getElementById('weather-form');
 const search = document.querySelector('input')
+const messageOne = document.getElementById('message-1');
+const messageTwo = document.getElementById('message-2');
 
 const getWeatherData = async (address) => {
     try {
@@ -7,10 +9,12 @@ const getWeatherData = async (address) => {
         const data = await response.json()
         // Notice that fetch only catches errors that are thrown by the server we need to catch manually the errors that are thrown by the client
         if (data.error) {
-            return console.log(data.error)
+            messageOne.textContent = data.error
+            messageTwo.textContent = ''
+            return
         }
-        console.log(data.locationPartialy)
-        console.log(data.forecast)
+        messageOne.textContent = data.locationPartialy
+        messageTwo.textContent = data.forecast
     } catch (error) {
         console.log(error);
     }
@@ -21,10 +25,8 @@ weatherForm.addEventListener('submit', (e) => {  // Event listener to listen for
 
     const location = search.value
 
-    if(location === '') {
-        alert('Please enter a location')
-        return
-    } 
+    messageOne.textContent = 'Loading...'
+    messageTwo.textContent = 'Please wait...'
 
     getWeatherData(location)
 
