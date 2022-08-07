@@ -29,6 +29,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
+        description: 'Hey my name is Peter Aronov and I am a web developer.',
         name: 'Peter Aronov'
     })
 })
