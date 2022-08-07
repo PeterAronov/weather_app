@@ -1,0 +1,25 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterAronov/weather_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterAronov/weather_app/issues"
+  },
+  "homepage": "https://github.com/PeterAronov/weather_app#readme",
+  "devDependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "request": "^2.88.2",
+    "status-code": "^0.1.0"
+  }
+}

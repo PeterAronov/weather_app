@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/app.js"></script>  <!-- defer is used to load the script at the end of the page -->
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Use this site to get your weather!</p>
+
+        <form id="weather-form">
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
+
+{{!-- {{>header}} --}}
+
+
+{{!-- To render a partial. --}}
+
+{{!-- We still use those two sets of curly braces like we did when we wanted to add a value into the template --}}
+
+{{!-- in a specific location. --}}
+
+{{!-- For a partial, though, we have to add one additional character, which is the greater than sign right --}}
+
+{{!-- here in the middle. --}}
+
+{{!-- Then after the greater than sign, we provide the partial name, which is just the file name. --}}
